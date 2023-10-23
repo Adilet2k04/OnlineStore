@@ -15,8 +15,10 @@ from environ import Env
 
 env = Env()
 env2 = Env()
+env3 = Env()
 env.read_env()
 env2.read_env()
+env3.read_env()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -137,3 +139,4 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 STRIPE_PUBLISHABLE_KEY = 'pk_test_51O1qOsCV8J36LWfaM5lbAcbSQk976Jpldfd9LztYnxE2iwqMnCfn3Bm9X2Ujs9XF0JUtL7hLVn4252i7gSGwIaLr00gz3ptCKc'
 STRIPE_SECRET_KEY = env2('STRIPE_SECRET_KEY')
 STRIPE_API_VERSION = '2022-08-01'
+STRIPE_WEBHOOK_SECRET = env3('STRIPE_WEBHOOK_SECRET')
